@@ -40,8 +40,8 @@
 	function findPage()
 	  {
 		  var params = new URLSearchParams(window.location.search);
-		  var name = params.get("name");
-		  if (name == "test")
+		  var service = params.get("name");
+		  if (service == "test")
 		  {
 			  console.log("This Is A Test Message!");
 		  }
