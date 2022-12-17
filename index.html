@@ -39,8 +39,9 @@
   <script type = "text/javascript">
 	function findPage()
 	  {
-		  var pageNameValue=request.getParameter("pagename");
-		  if (pageNameValue == "test")
+		  var params = new URLSearchParams(window.location.search);
+		  var name = params.get("name");
+		  if (name == "test")
 		  {
 			  console.log("This Is A Test Message!");
 		  }
