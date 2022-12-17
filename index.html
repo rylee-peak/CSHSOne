@@ -18,7 +18,7 @@
   <div id="user_div" class="loggedin-div">
     <h3>Welcome User</h3>
     <p id="user_para"></p>
-		<a href='account.html'><button>Continue to ASEdu</button></a>
+		<button onClick="findPage()">Continue to ASEdu</button>
     <button onclick="logout()">Logout</button>
   </div>
 
@@ -35,6 +35,20 @@
       messagingSenderId: "651171963358"
     };
     firebase.initializeApp(config);
+  </script>
+  <script>
+	function findPage()
+	  {
+		  var pageNameValue=request.getParameter("pagename");
+		  if (pageNameValue == "test")
+		  {
+			  console.log("This Is A Test!");
+		  }
+		  else
+		  {
+			  console.log("This Failed");
+		  }
+	  }
   </script>
   <script src="index.js"></script>
 
