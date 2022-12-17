@@ -18,7 +18,7 @@
   <div id="user_div" class="loggedin-div">
     <h3>Welcome User</h3>
     <p id="user_para"></p>
-		<button onClick="findPage()">Continue to ASEdu</button>
+		<button onclick="findPage()">Continue to ASEdu</button>
     <button onclick="logout()">Logout</button>
   </div>
 
@@ -36,7 +36,7 @@
     };
     firebase.initializeApp(config);
   </script>
-  <script>
+  <script type = "text/javascript">
 	function findPage()
 	  {
 		  var pageNameValue=request.getParameter("pagename");
