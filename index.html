@@ -43,6 +43,7 @@
 	function findPage()
 	  {
 		  var params = new URLSearchParams(window.location.search);
+		  var emailVal = document.getElementById("email_field").value;
 		  var name = params.get("name");
 		  if (name == "search")
 		  {
@@ -51,6 +52,10 @@
 		  else if (name == "tny")
 		  {
 			  window.location.href = "https://howto.tny.thewca.us";
+		  }
+		  else if (name == "portal")
+		  {
+			  window.location.href = "https://portal.thewca.us/authed.html#email=" + emailVal;
 		  }
 		  else
 		  {
