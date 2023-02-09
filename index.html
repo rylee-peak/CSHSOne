@@ -19,7 +19,7 @@
   </div>
 
   <div id="user_div" class="loggedin-div">
-    <h3>Welcome User</h3>
+    <h3 id="welcome">Welcome User</h3>
     <p id="user_para"></p>
 		<button onclick="findPage()">Continue</button>
     <button onclick="logout()">Logout</button>
@@ -40,6 +40,11 @@
     firebase.initializeApp(config);
   </script>
   <script type = "text/javascript">
+	var emailVal = document.getElementById("email_field").value;
+	if (emailVal == "rylee.peak@thewca.us")
+	{
+		document.getElementById("welcome").innerHTML = "Hi, Rylee!";
+	}
 	function findPage()
 	  {
 		  var params = new URLSearchParams(window.location.search);
