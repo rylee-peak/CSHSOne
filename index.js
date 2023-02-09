@@ -1,3 +1,4 @@
+var email_id;
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
@@ -9,7 +10,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     if(user != null){
 
-      var email_id = user.email;
+      email_id = user.email;
       document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
 
     }
@@ -22,6 +23,36 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   }
 });
+
+	if (email_id == "rylee.peak@thewca.us")
+	{
+		document.getElementById("welcome").innerHTML = "Hi, Rylee!";
+	}
+	function findPage()
+	  {
+		  var params = new URLSearchParams(window.location.search);
+		  var name = params.get("name");
+		  if (name == "search")
+		  {
+			  window.location.href = "https://search.thewca.us/search.html";
+		  }
+		  else if (name == "tny")
+		  {
+			  window.location.href = "https://howto.tny.thewca.us";
+		  }
+		  else if (name == "portal")
+		  {
+			  window.location.href = "https://portal.thewca.us/authed.html?email=" + email_id;
+		  }
+		  else if (name == "myWCA")
+		  {
+			  window.location.href = "https://my.thewca.us/authed.html?email=" + email_id;
+		  }
+		  else
+		  {
+			  alert("No service was made available to redirect you to. We are very sorry for this inconvenience");
+		  }
+	  }
 
 function login(){
 
