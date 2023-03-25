@@ -7,10 +7,27 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+	<style>
+		.skip-to-main-content-link {
+  			position: absolute;
+  			left: -9999px;
+  			z-index: 999;
+ 			padding: 1em;
+  			background-color: black;
+  			color: white;
+  			opacity: 0;
+		}
+		.skip-to-main-content-link:focus {
+  			left: 50%;
+  			transform: translateX(-50%);
+  			opacity: 1;
+		}
+	</style>
 </head>
 <body>
+	<a href="#main" class="skip-to-main-content-link">Skip to main content</a>
   <div id="login_div" class="main-div">
-    <h3>WCAOne</h3>
+    <h1>WCAOne</h1>
     <input type="email" placeholder="Email..." id="email_field" />
     <input type="password" placeholder="Password..." id="password_field" />
 	  <div class="cf-turnstile" data-sitekey="0x4AAAAAAAB0b5b1kvLgnr-R"></div> 
@@ -19,7 +36,7 @@
   </div>
 
   <div id="user_div" class="loggedin-div">
-    <h3 id="welcome">Welcome User</h3>
+    <h1 id="welcome">Welcome User</h1>
     <p id="user_para"></p>
 		<button onclick="findPage()">Continue</button>
     <button onclick="logout()">Logout</button>
