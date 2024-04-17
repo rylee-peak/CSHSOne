@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-  <title>WCAOne - One login for all of the WCA</title>
+  <title>CSHSOne - One login for all of the Computer Science Honor Society</title>
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -26,7 +26,7 @@
 <body>
 	<a href="#main" class="skip-to-main-content-link">Skip to main content</a>
   <div id="login_div" aria-label="Login Section, requires email and password" role="main" class="main-div">
-    <h1 id="main">WCAOne</h1>
+    <h1 id="main">CSHSOne</h1>
     <input aria-label="Email" type="email" placeholder="Email..." id="email_field" />
     <input aria-label="Password" type="password" placeholder="Password..." id="password_field" />
 	  <div class="cf-turnstile" data-sitekey="0x4AAAAAAAB0b5b1kvLgnr-R"></div> 
@@ -35,7 +35,7 @@
   </div>
 
   <div id="user_div" class="loggedin-div">
-    <h1 id="welcome">Welcome User</h1>
+    <h1 id="welcome">Welcome CSHS Member!</h1>
     <p id="user_para"></p>
 		<button onclick="findPage()">Continue</button>
     <button onclick="logout()">Logout</button>
@@ -66,21 +66,9 @@
 		  var params = new URLSearchParams(window.location.search);
 		  var emailVal = user.email;
 		  var name = params.get("name");
-		  if (name == "search")
+		  if (name == "myCSHS")
 		  {
-			  window.location.href = "https://search.thewca.us/search.html";
-		  }
-		  else if (name == "tny")
-		  {
-			  window.location.href = "https://howto.tny.thewca.us";
-		  }
-		  else if (name == "portal")
-		  {
-			  window.location.href = "https://portal.thewca.us/authed.html?email=" + emailVal;
-		  }
-		  else if (name == "myWCA")
-		  {
-			  window.location.href = "https://my.thewca.us/authed.html?email=" + emailVal;
+			  window.location.href = "https://my.one.thewca.us/authed.html?email=" + emailVal;
 		  }
 		  else
 		  {
