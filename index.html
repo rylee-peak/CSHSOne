@@ -71,10 +71,10 @@
 	function findPage()
 	  {
 		  //var params = new URLSearchParams(window.location.search);
-		  const params = new URLSearchParams(document.location.search);
+		  const params = new URLSearchParams(window.location.search);
 		  const emailVal = user.email;
-		  const name = params.get("name");
-		  if (name == "myCSHS")
+		  const redirect = params.get("name");
+		  if (name == "my")
 		  {
 			  window.location.href = "https://my.one.thewca.us/authed.html?email=" + emailVal;
 		  }
