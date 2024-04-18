@@ -70,7 +70,8 @@
 	}
 	function findPage()
 	  {
-		  var params = new URLSearchParams(window.location.search);
+		  //var params = new URLSearchParams(window.location.search);
+		  var params = new URLSearchParams(document.location.search);
 		  var emailVal = user.email;
 		  var name = params.get("name");
 		  if (name == "myCSHS")
